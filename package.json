@@ -1,0 +1,21 @@
+{
+  "name": "code-challange-1",
+  "version": "1.0.0",
+  "description": "Welcome! This repository contains three beginner-friendly JavaScript projects inspired by everyday life in Kenya. These mini-challenges help you practice core JavaScript skills by solving practical problems — from making chai, to calculating boda boda fares, to estimating mobile money transaction fees.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MissMokandu/code-challange-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MissMokandu/code-challange-1/issues"
+  },
+  "homepage": "https://github.com/MissMokandu/code-challange-1#readme"
+}
