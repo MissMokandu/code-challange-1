@@ -1,32 +1,25 @@
-function calculateChaiIngredients(numberOfCups) {
-  // Ingredient quantities per cup
-  const waterPerCup = 200; 
-  const milkPerCup = 50;   
-  const teaLeavesPerCup = 1;
-  const sugarPerCup = 2;   
+function calculateChaiIngredients() {
+  let input = prompt("Karibu! How many cups of Chai Bora would you like to make?");
+  let numberOfCups = parseInt(input);
 
-  
-  const totalWater = numberOfCups * waterPerCup;
-  const totalMilk = numberOfCups * milkPerCup;
-  const totalTeaLeaves = numberOfCups * teaLeavesPerCup;
-  const totalSugar = numberOfCups * sugarPerCup;
+  if (isNaN(numberOfCups) || numberOfCups <= 0) {
+    alert("Please enter a valid number of cups.");
+    return;
+  }
 
-  
-  console.log(`To make ${numberOfCups} cup${numberOfCups > 1 ? 's' : ''} of Kenyan Chai, you will need:`);
-  console.log(`Water: ${totalWater} ml`);
-  console.log(`Milk: ${totalMilk} ml`);
-  console.log(`Tea Leaves (Majani): ${totalTeaLeaves} tablespoon${totalTeaLeaves > 1 ? 's' : ''}`);
-  console.log(`Sugar (Sukari): ${totalSugar} teaspoon${totalSugar > 1 ? 's' : ''}`);
-  console.log(`\nEnjoy your Chai Bora!`);
+  let water = numberOfCups * 200;
+  let milk = numberOfCups * 50;
+  let teaLeaves = numberOfCups;
+  let sugar = numberOfCups * 2;
+
+  let message = `To make ${numberOfCups} cup(s) of Kenyan Chai, you will need:\n` +
+                `Water: ${water} ml\n` +
+                `Milk: ${milk} ml\n` +
+                `Tea Leaves (Majani): ${teaLeaves} tablespoon(s)\n` +
+                `Sugar (Sukari): ${sugar} teaspoon(s)\n\n` +
+                `Enjoy your Chai Bora!`;
+
+  console.log(message);
+  document.getElementById("output").textContent = message;
 }
 
-
-const userInput = prompt("Karibu! How many cups of Chai Bora would you like to make?");
-const numberOfCups = parseInt(userInput);
-
-
-if (!isNaN(numberOfCups) && numberOfCups > 0) {
-  calculateChaiIngredients(numberOfCups);
-} else {
-  console.log("Please enter a valid number of cups.");
-}
